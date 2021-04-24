@@ -1,39 +1,45 @@
 import React from "react";
-import image from "../assets/image.jpeg";
+import HalfRating from "./HalfRating";
 
 const Item = (props) => {
   const {
+    image,
     heading,
     subheading,
     productDetailLine,
     rating,
-    numReviews,
+    countReview,
     hours,
     lectures,
     levels,
-    currentPrice,
-    originalPrice,
+    price,
+    disprice,
   } = props.itemDetails;
-  
+
   return (
     <div className="Item">
-      <div className="ItemLeft">
-        <img src={image} alt="teddy" />
-        <div className="Description">
+      <img src={image} alt="teddy" />
+      <div className="Description">
+        <div className="About">
           <h3 className="Heading">{heading}</h3>
           <p className="SubHeading">{subheading}</p>
           <p className="ProductDetailLine">{productDetailLine}</p>
-          <div className="Rating">{rating}<span> ({numReviews})</span></div>
+
+          <div className="Rating">
+            <span className="NumberRating">{rating} </span>
+            <HalfRating rating={rating} />
+            <span className="Review"> ({countReview})</span>
+          </div>
           <p className="OtherDetails">
-              <span>{hours} total hours</span>
-              <span> &#9679; {lectures} lectures</span>
-              <span> &#9679; {levels}</span>
+            <span>{hours} total hours</span>
+            <span> &#9679; {lectures} lectures</span>
+            <span> &#9679; {levels} levels</span>
           </p>
         </div>
-      </div>
-      <div>
-        <p className="CurrentPrice">${currentPrice}</p>
-        <p className="OriginalPrice">${originalPrice}</p>
+        <div className="Pricing">
+          <p className="CurrentPrice">${price}</p>
+          <p className="OriginalPrice">${disprice}</p>
+        </div>
       </div>
     </div>
   );
