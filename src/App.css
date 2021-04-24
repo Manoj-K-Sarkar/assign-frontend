@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  height: 100vh;
+  width: 100vw;
+  background-color: #F4F5F7;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.Paper{
+  position: relative;
+  background-color: #fff;
+  min-height: 400px;
+  min-width: 800px;
+  padding: 8px 32px;
+  box-shadow: 0px 1px 24px 2px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.BottomLeftDesign{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 6px;
+  width: 32px;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0.4;
+  box-shadow: inset 0px 1px 24px 2px rgba(0, 0, 0, 0.2);
+}
+
+.List{
+
+}
+
+
+
+.Item{
+  border-top: 2px solid #EBEBE9;
+  height: 120px;
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Item img{
+  height: 100%;
+  width: 160px;
+}
+
+.ItemLeft{
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.Description{
+  padding-left: 8px;
+}
+
+.SubHeading{
+  font-size: 14px;
+}
+
+.ProductDetailLine{
+  font-weight: 100;
+  font-size: 12px;
+}
+
+.OtherDetails{
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.CurrentPrice{
+  font-weight: 500;
+}
+
+.OriginalPrice{
+  text-decoration: line-through;
+  font-weight: 100;
+  font-size: 14px;
 }
